@@ -1,0 +1,97 @@
+// _   _   _
+//|_| |_| |_|
+//	   _
+// 1º |_| nome da cor
+// 2º |_| repete o Nome da cor
+// 3º |_| (1-9)
+
+@function multiply($base, $x, $max: 6) {
+	$result: #{$base};
+	@for $i from 1 to $max - 1 {
+		$result: $result + $base;
+	}
+	@if ($x == 0) {
+		@return $result + $base;
+	} @else {
+		@return $result + $x;
+	}
+	
+}
+
+@each $color in e, f {
+	@for $i from 0 through 9{
+		.#{multiply($color, $i, 3)}{
+			background-color: ##{multiply($color, $i, 3)};
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

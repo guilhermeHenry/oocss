@@ -1,0 +1,33 @@
+@mixin padding($p){
+	.p#{$p} {
+		padding: #{$p}px;
+		padding-top: #{$p}px;
+		padding-right: #{$p}px;
+		padding-bottom: #{$p}px;
+		padding-left: #{$p}px;
+	}
+}
+
+@mixin margin($m){
+	/* margin #{$m} px*/
+	.m#{$m} {
+		margin: #{$m}px;
+		margin-top: #{$m}px;
+		margin-right: #{$m}px;
+		margin-bottom: #{$m}px;
+		margin-left: #{$m}px;
+	}
+}
+
+@each $n in 0, 1, 2, 3, 4, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50{
+	@include margin($n);
+	@include padding($n);
+}
+
+@for $i from 1 through 50{
+	.f#{$i} {font-size: #{$i / 16}em;}
+}
+
+@each $x in 100, 200, 300, 400, 500, 600, 700, 800, 900{
+	.f#{$x} {font-weight: #{$x};}
+}
