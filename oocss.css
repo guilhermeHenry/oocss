@@ -1,5 +1,0 @@
-/*DEBUG*/
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-[font]{font-family: 'Roboto', sans-serif;}
-[center]{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
