@@ -1,14 +1,28 @@
 # oocss
 
-prefixo + (-) + valor da propriedade.
+## (1)letra+(1)valor 
+
+| prop          | prefixo | values                                        | unidade |
+| :------------ | ------: | --------------------------------------------- | ------- |
+| font-size     |       f | 1-50                                          | em      |
+| line-height   |       l | 1-50                                          | em      |
+| margin        |       m | 1-50                                          | px      |
+| padding       |       p | 1-50                                          | px      |
+| border-radius |       r | 1, 2, 3, 4, 5, 8, 10, 15, 20, 25, 30, 50, 100 | px      |
 
 ```css
- .bg-red{background: red;}
- ```
+.f16{font-size: 1em;}
+```
 
-| prefixo | name             | values exemple              |
-| ------- | :--------------- | --------------------------- |
-| bg      | background-color | red, green, yellow, blue... |
-| fl      | float            | left, right, insue          |
-| tx      | text             |                             |
+## (prefixo)-(valor da propriedade)
 
+| name             | prefixo | values exemple                         | result  |
+| :--------------- | ------: | -------------------------------------- | ------- |
+| background-color |      bg | red, green, yellow, blue, etc..        | bg-red  |
+| float            |      fl | left, right, insue, etc..              | fl-left |
+| text             |      tx | red, yellow, blue, white, black, etc.. | tx-red  |
+
+```css
+.bg-red{background: red;}
+.fl-left{float: left;}
+```
