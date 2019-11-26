@@ -2,7 +2,9 @@
 
 prefixo + (-) + valor da propriedade.
 
- ``.bg-red{background: red;}``
+```css
+ .bg-red{background: red;}
+ ```
 
 | prefixo | name             | values exemple              |
 | ------- | :--------------- | --------------------------- |
