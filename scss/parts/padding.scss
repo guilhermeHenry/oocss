@@ -21,8 +21,3 @@
 	@include rep($x, 'padding');
 }
 
-@for $x from 1 through 50 {
-	.l#{$x}{
-		line-height: #{$x/16}em;
-	}
-}
