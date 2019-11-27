@@ -1,5 +1,15 @@
 # oocss
 
+## Variáveis globais
+
+- center
+- right
+- center
+- right
+- content
+- container
+- image
+
 ## (1)letra+(1)valor 
 
 | prop          | prefixo | values                                        | unidade |
@@ -21,6 +31,9 @@
 | background-color |      bg | red, green, yellow, blue, etc..        | bg-red  |
 | float            |      fl | left, right, insue, etc..              | fl-left |
 | text             |      tx | red, yellow, blue, white, black, etc.. | tx-red  |
+| btn              |         |                                        |         |
+|                  |         |                                        |         |
+
 
 ```css
 .bg-red{background: red;}
