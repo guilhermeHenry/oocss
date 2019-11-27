@@ -26,13 +26,14 @@
 
 ## (prefixo)-(valor da propriedade)
 
-| name             | prefixo | values exemple                         | result  |
-| :--------------- | ------: | -------------------------------------- | ------- |
-| background-color |      bg | red, green, yellow, blue, etc..        | bg-red  |
-| float            |      fl | left, right, insue, etc..              | fl-left |
-| text             |      tx | red, yellow, blue, white, black, etc.. | tx-red  |
-| btn              |         |                                        |         |
-|                  |         |                                        |         |
+| name             |       prefixo | values exemple                             | result  |
+| :--------------- | ------------: | ------------------------------------------ | ------- |
+| background-color |            bg | red, green, yellow, blue, etc..            | bg-red  |
+| float            |            fl | left, right, insue, etc..                  | fl-left |
+| text             |            tx | red, yellow, blue, white, black, etc..     | tx-red  |
+| btn              | color<br>type | red, yellow, blue, white, black, etc..<br> | btn-red |
+
+
 
 
 ```css
