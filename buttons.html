@@ -1,16 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Buttons</title>
-	<link rel="stylesheet" href="../css-reset/reset.css">
-	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css-reset/reset.css">
+	<link rel="stylesheet" href="styles/buttons-painel.css">
+	<link rel="stylesheet" href="styles/buttons.css">
+	<link rel="stylesheet" href="css/oocss.css">
+	<link rel="stylesheet" type="text/css" href="icomoon/style.css">
 </head>
 <body>
-	<div class="left">left</div>
-	<div class="center">
-		<button>botão</button>
-	</div>
-	<div class="right">right</div>
+	<main class="painel">
+		<section class="right">
+			<article class="block">
+				<h1 class="title">Estilo</h1>
+				<form id="button-styles">
+					<label>
+						<span class="btn p6 cool blue">3D</span>
+						<input type="radio" name="styles" class="no-appearance" value="3D">
+					</label>
+					<label>
+						<span class="btn p6 plastic blue">Platic</span>
+						<input type="radio" name="styles" class="no-appearance" value="plastic">
+					</label>
+					<label>
+						<span class="btn p6 cool blue">Cool</span>
+						<input type="radio" name="styles" class="no-appearance" value="cool">
+					</label>
+					<label>
+						<span class="btn p6 normal blue">Normal</span>
+						<input type="radio" name="styles" class="no-appearance" value="normal" checked>
+					</label>
+					<label>
+						<span class="btn p6 round blue">Round</span>
+						<input type="radio" name="styles" class="no-appearance" value="round">
+					</label>
+					<label>
+						<span class="btn p6 gradient blue">Gradient</span>
+						<input type="radio" name="styles" class="no-appearance" value="gradient">
+					</label>
+				</form>
+			</article>
+		</section>
+		<article class="center">
+			<button id="target">Button</button>
+		</article>
+		<section class="right">
+			<article class="block">
+				<h1 class="title">Escolha a cor</h1>
+				<form name="colors" id="button-colors">
+					<input type="radio" name="colors" class="no-appearance" value="red">
+					<input type="radio" name="colors" class="no-appearance" value="yellow">
+					<input type="radio" name="colors" class="no-appearance" value="blue">
+					<input type="radio" name="colors" class="no-appearance" value="green">
+					<input type="radio" name="colors" class="no-appearance" value="purple">
+					<input type="radio" name="colors" class="no-appearance" value="gray" checked>
+				</form>
+				<div class="input" id="tx-color">
+					<div class="left">
+						<span>Cor do texto</span>
+					</div>
+					<div class="center">
+						<input type="text" name="text" id="button-text" value="Button">
+					</div>
+					<div class="right">
+						<input type="checkbox" name="btn-width" value="1" class="p11 checkbox green slim">
+					</div>
+				</div>
+			</article>
+			<hr class="title-line" style="margin: 15px 0" title="Gerar Código">
+			<div class="controllers">
+				<label class="input">
+					<div class="left">
+						<span>Texto</span>
+					</div>
+					<div class="center">
+						<input type="text" name="text" id="button-text" value="Button">
+					</div>
+					<div class="right">
+						<input type="checkbox" name="btn-width" value="1" class="checkbox p8 green go">
+					</div>
+				</label>
+				<label class="input">
+					<span class="left">Largura</span>
+					<div class="center">
+						<input type="number" name="text" id="button-text" value="43">
+					</div>
+					<div class="right">
+						<input type="checkbox" name="btn-width" value="1" class="p11 checkbox green slim">
+					</div>
+				</label>
+				<label class="input">
+					<span class="left">Ícone</span>
+					<div class="center">
+						<input type="text" name="text" id="button-text" value="home2">
+					</div>
+					<div class="right">
+						<input type="checkbox" name="btn-width" value="1" class="p11 checkbox into green slim">
+					</div>
+				</label>
+			</div>
+
+			<h1 class="title">Tamanho</h1>
+			<form class="size" id="button-size">
+				<input type="radio" name="size" class="no-appearance" value="p10" text="large" checked>
+				<input type="radio" name="size" class="no-appearance" value="p8" text="nomal">
+				<input type="radio" name="size" class="no-appearance" value="p6" text="small">
+				<input type="radio" name="size" class="no-appearance" value="p3" text="mini">
+			</form>
+			<hr class="title-line" title="Gerar Código">
+			<footer>
+				<button type="button" class="btn blue plastic">Gerar Código</button>
+				<hr class="btn yellow plastic icon-file-text">
+				<pre>&lt;<span class="anc">a</span> <span class="att">href</span>=<span class="val">"#"</span> <span class="att">class</span>=<span class="val">"btn-gradient red mini"</span>>Button&lt;/<span class="anc">a</span>></pre>
+			</footer>
+		</section>
+	</main>
+	<script src="buttons.app.js"></script>
 </body>
 </html>

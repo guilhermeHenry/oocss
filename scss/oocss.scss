@@ -1,3 +1,9 @@
-@import "parts/dev";
-@import "parts/colors";
-@import "parts/padding";
+// sass --watch scss/oocss.scss css/oocss.css
+@import 'parts/background-color.scss';
+@import 'parts/border-radius.scss';
+@import 'parts/color.scss';
+@import 'parts/line-height.scss';
+@import 'parts/margin.scss';
+@import 'parts/padding.scss';
+@import 'parts/text-align.scss';
+@import 'parts/text-decoration.scss';

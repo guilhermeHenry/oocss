@@ -1,0 +1,8 @@
+.btn.normal{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-image: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+}
+
+.btn.normal:hover{border-color: #bbb;}
+.btn.normal:active{background-image: linear-gradient(to top, #f9f9f9, #f1f1f1);}

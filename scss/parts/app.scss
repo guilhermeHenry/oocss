@@ -22,11 +22,7 @@ $props: (
 	)
 );
 
-@mixin element($name){
-	$prop: map-get($props, $name);
-	$prefix: map-get($prop, prefix);
-	$values: map-get($prop, values);
-
+@mixin element($name, $prefix, $values){
 	@each $value in $values {
 		.#{$prefix}-#{$value}{
 			#{$name}: #{$value};
@@ -34,6 +30,66 @@ $props: (
 	}
 }
 
-//@include element(float);
-//@include element(text-align);
-@include element(font-style);
+
+// _   _   _
+//|_| |_| |_|
+//	   _
+// 1º |_| nome da cor
+// 2º |_| repete o Nome da cor
+// 3º |_| (1-9)
+
+// $repeat, $max, $prefix: null, $sufix: null
+// @function multiply($arguments) {
+// 	$max    : map-get($arguments, max);
+// 	$repeat : map-get($arguments, repeat);
+// 	$prefix : map-get($arguments, prefix);
+// 	$sufix  : map-get($arguments, sufix);
+
+// 	@if not map-has-key($arguments, max){$max: 1;}
+
+// 	$result: $prefix;
+
+// 	@for $i from 0 to $max {
+// 		$result: $result + $repeat; //ee
+// 	}
+
+// 	@if ($sufix == 0){
+// 		@return $result + $repeat;
+// 	} @else{
+// 		@return $result + $sufix;
+// 	}
+
+	
+// }
+
+// $colors: (
+// 	black: (
+// 		name: (prefix: b, max: 2), 
+// 		prop: (max: 3)
+// 	)
+// );
+
+// @each $title, $value in $colors{
+// 	$name: map-get($value, name);
+// 	$prop: map-get($value, prop);
+	 
+// 	@for $i from 1 to 9 {
+// 		.#{multiply(map-merge($name, (repeat: $i, max: 2)))} {
+// 			background-color: ##{multiply(map-merge($prop, (repeat: $i)))};
+// 		}
+// 	}
+// }
+
+
+// @each $item in (repeat: e, max: 2), (repeat: f, max: 2){
+// 	@for $i from 0 through 9{
+// 		.#{multiply(map-merge($item, (sufix: $i)))}{
+// 			background-color: ##{multiply(map-merge($item, (sufix: $i)))};
+// 		}
+// 	}
+// }
+
+
+// @each $nx in $colorNames {
+// 	#{$nx} {background-color: #{$nx};}
+// }

@@ -1,0 +1,87 @@
+body{font-family: roboto;}
+
+label{float: left; width: 100%; margin: 10px 0;}
+label::before{
+	content: attr(title);
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 2px;
+	padding-bottom: 3px;
+}
+input{
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.input input{
+	box-shadow: 0 1px 1px inset rgba(0, 0, 0, .05);
+}
+
+input[type=url]{
+	border-color: #e1e1e1;
+	background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

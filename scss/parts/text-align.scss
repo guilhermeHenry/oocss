@@ -1,0 +1,9 @@
+// sass --watch scss/parts/text-align.scss css/parts/text-align.css
+$align: "left", "right", "center", "justify", "justify-all", "start", "end", "match-parent", "inherit", "unset";
+
+@import 'app.scss';
+@include element("text-align", "al", $align);
+
+.no-align {
+  text-align: initial;
+}
