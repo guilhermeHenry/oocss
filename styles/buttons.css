@@ -1,9 +1,0 @@
-@import url('btn/round.css');
-@import url('btn/normal.css');
-@import url('btn/plastic.css');
-@import url('btn/gradient.css');
-
-/* ------------ BUTTON STYLES ------------ */
-.btn{text-decoration: none; cursor: pointer;}
-
-
