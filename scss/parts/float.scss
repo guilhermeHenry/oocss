@@ -1,0 +1,5 @@
+// sass --watch  scss/parts/float.scss css/parts/float.css
+
+$float: (left, right, none, inline-start, inline-end, inherit, initial, unset);
+@import './app.scss';
+@include element('float', 'fl', $float);
