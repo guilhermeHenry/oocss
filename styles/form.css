@@ -1,55 +1,32 @@
 body{font-family: roboto;}
 
-label{float: left; width: 100%; margin: 10px 0;}
-label::before{
-	content: attr(title);
-	display: block;
-	font-size: 12px;
-	font-weight: bold;
-	padding-left: 2px;
-	padding-bottom: 3px;
-}
-input{
-	width: 300px;
+form{width: 450px; margin: 100px auto; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap: 10px;}
+input[type="text"],
+textarea{
+	float: left;
+	width: 100%;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	/*box-shadow: 0 1px 1px inset rgba(0, 0, 0, .05);*/
 }
 
-.input input{
-	box-shadow: 0 1px 1px inset rgba(0, 0, 0, .05);
-}
-
-input[type=url]{
-	border-color: #e1e1e1;
-	background-color: #eee;
-}
+label{float: left; width: 100%; margin: 0 0;}
 
 
+label .f22{font-weight: 300; padding: 8px;}
+label .f18{font-weight: normal; padding: 8px;}
+label .f16{font-weight: normal; padding: 6px;}
+label .f15{font-weight: normal; padding: 6px;}
 
+form label:first-child{grid-column: span 4;}
+form label:nth-child(2){grid-column: span 2;}
+form label:nth-child(3){grid-column: span 2;}
+form label:nth-child(4){grid-column: span 4;}
 
+form label:nth-child(5){grid-column: span 4;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+form label:nth-child(6){grid-column: span 2;}
+form label:nth-child(7){grid-column: span 2;}
 
 
 

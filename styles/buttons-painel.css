@@ -201,37 +201,6 @@ pre .anc {color: #f92672;} /* anchor tag */
 pre .att {color: #1c7f1c;} /* attribute */
 pre .val {color: #c95b13;} /* value */
 
-
-hr[title].title-line{
-	float: left;
-	width: 100%;
-	border: 0;
-	position: relative;
-	text-align: center;
-}
-
-hr.title-line[title]::before{
-	content: attr(title);
-	z-index: 1;
-	position: relative;
-	padding: 0 5px;
-	font-size: 14px;
-	line-height: inherit;
-	background-color: white;
-}
-
-hr.title-line[title]::after{
-	content: '';
-	float: left;
-	width: 100%;
-	height: 1px;
-	top: 50%;
-	left: 0;
-	position: absolute;
-	background-color: #eee;
-}
-
-
 /*CHECKBOX*/
 /* HTML : <input type="checkbox" name="" value=""> */
 

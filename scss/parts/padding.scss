@@ -1,0 +1,3 @@
+// sass --watch  scss/parts/padding.scss css/parts/padding.css
+@import './app.scss';
+@include prop("padding", "p");
