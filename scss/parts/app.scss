@@ -25,6 +25,9 @@ $colors: 'snow', 'ghostwhite', 'whitesmoke', 'gainsboro', 'floralwhite', 'oldlac
 				#{$name}-#{map-get($arr, $side)}:  #{$size}px;
 			}
 		}
+
+		.#{$prefix}#{$size}tb{#{$name}-top:  #{$size}px; #{$name}-bottom:  #{$size}px;}
+		.#{$prefix}#{$size}lr{#{$name}-left:  #{$size}px; #{$name}-right:  #{$size}px;}
 	}
 }
 

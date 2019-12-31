@@ -13,9 +13,20 @@
 @import 'parts/float.scss';
 @import 'parts/font-size.scss';
 
-@import '../styles/include.scss';
+//buttons
+@import '../styles/buttons/btn';
+@import '../styles/buttons/round';
+@import '../styles/buttons/normal';
+@import '../styles/buttons/plastic';
+@import '../styles/buttons/gradient';
 
+// form
+@import '../styles/form/inputs/form';
+@import '../styles/form/checkbox/checkbox';
 
+//node modules
+@import '../node_modules/select/style';
+@import '../node_modules/css-reset/reset';
 
 hr[title].title-line{
 	float: left;

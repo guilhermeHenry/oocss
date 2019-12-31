@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/guilhermeHenry/oocss#readme",
   "dependencies": {
-    "css-reset": "git+https://github.com/guilhermeHenry/css-reset.git"
+    "css-reset": "git+https://github.com/guilhermeHenry/css-reset.git",
+    "select": "git+https://github.com/guilhermeHenry/select.git",
+    "textarea-resize": "git+https://github.com/guilhermeHenry/textarea-resize.git"
   }
 }

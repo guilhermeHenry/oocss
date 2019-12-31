@@ -3,39 +3,93 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Forms</title>
-	<link rel="stylesheet" href="node_modules/css-reset/reset.css">
 	<link rel="stylesheet" href="style.min.css">
-	<link rel="stylesheet" type="text/css" href="styles/form.css">
+	<link rel="stylesheet" type="text/css" href="styles/form/inputs/form.css">
+	<link rel="stylesheet" type="text/css" href="styles/form/inputs/painel.css">
+	<!-- <link rel="stylesheet" href="node_modules/select/style.css"> -->
 </head>
-<body >
-	<form>
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f22" required>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f18" required>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f18" required>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f16" required>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<textarea class="f18" placeholder="Assunto" rows="3"></textarea>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f15" required>
-		</label>
-
-		<label class="input" title="Seu Nome">
-			<input type="text" name="user-name" placeholder="Seu nome" class="f15" required>
-		</label>
+<body>
+	<form class="form">
+		<section title="Input Shadow">
+			<div class="block">
+				<label class="input shadow f22" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" required>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input shadow f18" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" required>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input shadow f18" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" required>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input shadow f16" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" required>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input shadow f16" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<!-- <input type="text" name="user-name"  class="" required> -->
+					<textarea class="field" rows="3" placeholder="Seu nome"></textarea>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input shadow f15" title="Seu Nome">
+					<span class="legend">Seu nome</span>
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" required>
+				</label>
+			</div>
+		</section>
+		<section title="Input Float">
+			<div class="block">
+				<label class="input float f16 white" title="Seu Nome">
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" value="" required>
+					<span class="legend">Escreva seu nome</span>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input float f18 white" title="Seu Nome">
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" value="" required>
+					<span class="legend">Escreva seu nome</span>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input float f20 white" title="Seu Nome">
+					<input type="text" name="user-name" placeholder="Seu nome" class="field" value="" required>
+					<span class="legend">Escreva seu nome</span>
+				</label>
+			</div>
+			<div class="block">
+				<label class="input float f20" title="Seu Nome">
+					<textarea  id="textarea" rows="5" style="line-height: 22px" class="field" placeholder="Seu nome">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</textarea>
+					<span class="legend">Escreva seu nome</span>
+				</label>
+			</div>
+			<div class="block">
+				<label class="select float f22">
+					<span class="field">Escolha o seu estado</span>
+					<div class="menu">
+						<span class="option">Minas Gerais</span>
+						<span class="option">São Paulo</span>
+						<span class="option">Rio de Janeiro</span>
+						<span class="option selected">Rio Grande do Sul</span>
+						<span class="option">Santa Catarina</span>
+						<span class="option">Amazonas</span>
+						<span class="option">Mato Grosso do Sul</span>
+					</div>
+				</label>
+			</div>
+		</section>
 	</form>
+	<script type="module" src="./app.js"></script>
 </body>
 </html>
