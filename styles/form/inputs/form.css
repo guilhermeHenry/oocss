@@ -40,15 +40,28 @@
 	position: relative;
 	margin: 15px 0;
 }
+.input.float:before{
+	content: '';
+	height: 2px;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	background-color: #eee;
+}
+.input.float:hover::before{background-color: #ccc;}
+.input.float:focus-within:before{background-color: blue;}
 
-.input.float > .field{
+.input.float.gray .field{border-bottom-color: #e8e8e8;}
+
+.input.float .field{
 	border: 0;
 	float: left;
 	width: 100%; 
 	line-height: 20px;
-	border: 1px solid transparent;
-	border-bottom-color: #eee;
+	border: 0;
+	background-color: transparent;
 }
+
 
 .input.float > span{
 	position: absolute;
@@ -63,7 +76,7 @@
 	margin-top: -10px;
 }
 
-.input.float > .field:focus {border-bottom-color: blue;}
+
 .input.float > .field::-webkit-input-placeholder {opacity: 0;}
 
 .input.float > .field:not(:placeholder-shown) + .legend,
