@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Forms</title>
-	<link rel="stylesheet" href="style.min.css">
-	<link rel="stylesheet" type="text/css" href="styles/form/inputs/form.css">
-	<link rel="stylesheet" type="text/css" href="styles/form/inputs/painel.css">
-	<!-- <link rel="stylesheet" href="node_modules/select/style.css"> -->
+	<link rel="stylesheet" href="../reset/style.css">
+	<link rel="stylesheet" href="../css/parts/font-size.css">
+	<link rel="stylesheet" href="../styles/form/inputs/form.css">
+	<link rel="stylesheet" href="../styles/form/inputs/painel.css">
 </head>
 <body>
 	<form class="form">
@@ -77,7 +77,7 @@
 			<div class="block">
 				<label class="select float f18 gray">
 					<span class="field">Escolha o seu estado</span>
-					<div class="menu">
+					<div class="menu bottom">
 						<span class="option">Minas Gerais</span>
 						<span class="option">São Paulo</span>
 						<span class="option">Rio de Janeiro</span>
@@ -89,7 +89,30 @@
 				</label>
 			</div>
 		</section>
+		<section class="no-grid" title="Input line">
+				<div class="block input line f22">
+					<label>
+						<input type="text" class="field" placeholder="exemplo: nome.sobrenome@email.com">
+						<span class="legend">Seu Email</span>
+					</label>
+					<label>
+						<input type="text" class="field" placeholder="No minnimo 26 caractteres">
+						<span class="legend">Seu senha</span>
+					</label>
+				</div>
+				<div class="block input white line f18">
+					<label>
+						<input type="text" class="field" placeholder="exemplo: nome.sobrenome@email.com">
+						<span class="legend">Seu Email</span>
+					</label>
+					<label>
+						<input type="text" class="field" placeholder="No minnimo 26 caractteres">
+						<span class="legend">Seu senha</span>
+					</label>
+				</div>
+		</section>
 	</form>
-	<script type="module" src="./app.js"></script>
+	<script type="module" src="../js/textarea-resize.js"></script>
+	<script type="module" src="./js/form-select.js"></script>
 </body>
 </html>

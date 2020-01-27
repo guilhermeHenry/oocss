@@ -1,5 +1,3 @@
-import select from './node_modules/select/app.js';
-
 let textarea = document.getElementById('textarea');
 
 // getstyle computed

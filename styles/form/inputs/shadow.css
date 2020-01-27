@@ -1,0 +1,32 @@
+.input.shadow .field{
+	float: left;
+	width: 100%;
+	border-radius: 3px;
+	font-size: inherit;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+}
+
+.input.shadow.f15 .field{font-weight: normal; padding: 6px;}
+.input.shadow.f16 .field{font-weight: normal; padding: 6px;}
+.input.shadow.f18 .field{font-weight: normal; padding: 8px;}
+.input.shadow.f22 .field{font-weight: 300; padding: 8px;}
+
+.input.shadow .options{border: 1px solid #ccc; border-radius: 3px;}
+.input.shadow.f15 .options{font-weight: normal; padding: 6px 0;}
+.input.shadow.f16 .options{font-weight: normal; padding: 6px 0;}
+.input.shadow.f18 .options{font-weight: normal; padding: 8px 0;}
+.input.shadow.f22 .options{font-weight: 300; padding: 8px 0;}
+
+.input.shadow.f15 .output{font-weight: normal; padding: 6px;}
+.input.shadow.f16 .output{font-weight: normal; padding: 6px;}
+.input.shadow.f18 .output{font-weight: normal; padding: 8px;}
+.input.shadow.f22 .output{font-weight: 300; padding: 8px;}
+
+
+.input.shadow .legend{
+	float: left;
+	font-size: 14px;
+	font-weight: 500;
+	padding-left: 2px;
+}

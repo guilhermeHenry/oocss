@@ -1,3 +1,6 @@
+@import url('../../css/parts/float.css');
+@import url('../../css/parts/padding.css');
+
 /*https://1stwebdesigner.com/free-code-snippets-css-buttons/*/
 body{
 	font-family: roboto;
@@ -29,50 +32,23 @@ body{
 #button-size input::before{content: attr(text);}
 #button-size input:checked{background-color: #0581FD; color: white;}
 
-.p3{padding: 3px;} /* mini */
-.p5{padding: 5px;} /* small */
-.p6{padding: 6px;} /* small */
-.p7{padding: 7px;}
-.p8{padding: 8px;} /* normal */
-.p9{padding: 9px;}
-.p10{padding: 10px;} /* large */
-.p11{padding: 11px;}
-.p12{padding: 12px;}
-.p13{padding: 13px;}
-.p15{padding: 15px;}
-
+/*button-styles*/
 #button-styles{
 	float: left;
 	width: 100%;
 }
-
-#button-styles label{float: left; width: 100%; border-bottom: 1px solid #f1f1f1; padding: 15px 0;}
-#button-styles label:last-child{border-bottom: 0;}
-#button-styles span{float: left; min-width: 130px; text-align: center;}
-#button-styles label:before{
-	content: attr(title);
-	float: left;
-}
-#button-styles input{
-	float: right;
-	width: 18px;
-	height: 18px;
-	padding: 2px;
-	cursor: pointer;
-	position: relative;
-	border-radius: 100px;
-	border: 2px solid #ccc;
-}
-#button-styles input::after{
-	content: '';
+#button-styles label{
 	float: left;
 	width: 100%;
-	height: 100%;
-	border-radius: 100px;
-	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #f1f1f1;
+	padding: 15px 0;
 }
-#button-styles input:checked{border-color: #2196F3;}
-#button-styles input:checked::after{background-color: #2196F3;}
+
+#button-styles label:last-child{border-bottom: 0;}
+#button-styles span{min-width: 130px;}
 
 /*COLORS*/
 #button-colors{
@@ -126,7 +102,7 @@ body{
 #tx-color .left{width: 120px; line-height: 32px; font-size: 15px; font-weight: 500; text-align: center;}
 #tx-color .center{}
 #tx-color .right{width: 80px; text-align: center;}
-#tx-color .right input{background-color: white; margin: 4px 0;}
+#tx-color .right input{margin: 4px 0;}
 
 #tx-color:before{
 	content: '';
@@ -200,79 +176,3 @@ pre .bt  {color: #f8f8f2;} /* <> */
 pre .anc {color: #f92672;} /* anchor tag */
 pre .att {color: #1c7f1c;} /* attribute */
 pre .val {color: #c95b13;} /* value */
-
-/*CHECKBOX*/
-/* HTML : <input type="checkbox" name="" value=""> */
-
-.checkbox.slim{
-    position: relative;
-    -webkit-appearance: none;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
-    outline: none;
-    border-radius: 20px;
-
-    transition: .5s;
-    width: auto;
-    cursor: pointer;
-}
-
-.checkbox.slim:checked{background: #03a9f4;}
-.checkbox.green:checked{background-color: #4FD768;}
-
-.checkbox.slim::before{
-  content: '';
-  position: absolute;
-  border-radius: 20px;
-  top: 0;
-  left: 0;
-  background: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
-  transition: .2s;
-}
-.checkbox.slim:checked:before{box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);}
-
-.checkbox.into{box-shadow: none; background-color: #f2f2f2;}
-.checkbox.into:before{transform: scale(.9);}
-
-.checkbox.slim.p15{width: 55px;}
-.checkbox.slim.p15:before{width: 30px; height: 30px;}
-.checkbox.slim.p15:checked:before{left: 24px;}
-
-
-.checkbox.slim.p11{width: 36px;}
-.checkbox.slim.p11:before{width: 22px; height: 22px;}
-.checkbox.slim.p11:checked:before{left: calc(50% - 2px);}
-
-.checkbox.slim.into.p11{width: 34px;}
-.checkbox.slim.into.p11:before{width: 22px; height: 22px;}
-.checkbox.slim.into.p11:checked:before{left: calc(50% - 5px);}
-
-
-.checkbox.go{
-    position: relative;
-    -webkit-appearance: none;
-    
-    outline: none;
-    border-radius: 20px;
-
-   transition: background .5s;
-    width: auto;
-    cursor: pointer;
-    background-color: #f1f1f1;
-}
-.checkbox.go::before{
-  content: '';
-  top: 0;
-  left: 0;
-  top: 50%;
-  transition: left .2s;
-  background: white;
-  margin-top: -10px;
-  position: absolute;
-  border-radius: 20px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-.checkbox.go.p8{width: 34px;}
-.checkbox.go.p8:before{width: 20px; height: 20px;}
-.checkbox.go.p8:checked:before{left: 14px;}

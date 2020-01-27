@@ -1,0 +1,114 @@
+
+/*INPUT > Float Label*/
+.input.float{
+	float: left; 
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+}
+.input.float:before{
+	content: '';
+	height: 2px;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	background-color: #eee;
+}
+.input.float:hover::before{background-color: #ccc;}
+.input.float:focus-within:before{background-color: blue;}
+
+.input.float.gray .field{border-bottom-color: #e8e8e8;}
+
+.input.float .field{
+	border: 0;
+	float: left;
+	width: 100%; 
+	line-height: 20px;
+	border: 0;
+	background-color: transparent;
+}
+
+
+.input.float > span{
+	position: absolute;
+	left: 0;
+	cursor: text;
+	height: 20px;
+	line-height: 20px;
+	font-size: inherit;
+	transition-duration: .2s;
+	transition-property: top;
+	top: 50%;
+	margin-top: -10px;
+}
+
+
+.input.float > .field::-webkit-input-placeholder {opacity: 0;}
+
+.input.float > .field:not(:placeholder-shown) + .legend,
+.input.float > .field:focus + .legend {
+	color: #999;
+	cursor: default;
+	font-weight: 500;
+	font-size: 14px;
+	margin-top: -15px;
+	top: 0;
+}
+
+.input.float > .field:focus + .legend{color: blue;}
+.input.float > .field:focus::-webkit-input-placeholder {opacity: 1;}
+
+.input.float.f16 > .field{padding: 6px 0;}
+.input.float.f18 > .field{padding: 8px 0;}
+.input.float.f20 > .field{padding: 9px 0; font-weight: 300;}
+.input.float.f22 > .field{padding: 10px 0; font-weight: 300;}
+
+.input.float.f16 > span{font-weight: 500;}
+.input.float.f20 > span,
+.input.float.f22 > span{font-weight: 300;}
+
+.select.float{
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.select.float .field{
+	border: 0;
+	float: left;
+	width: 100%; 
+	line-height: 20px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-bottom-color: #eee;
+}
+
+.select.float.f16 .field{padding: 6px 0;}
+.select.float.f18 .field{padding: 8px 0;}
+.select.float.f20 .field{padding: 9px 0; font-weight: 300;}
+.select.float.f22 .field{padding: 10px 0; font-weight: 300;}
+
+.select.float .menu{
+	left: 0;
+	width: 100%;
+	float: left;
+	background-color: #eee;
+	position: absolute;
+	/*display: none;*/
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	border-radius: 5px;
+	overflow: hidden;
+	max-height: 220px;
+	overflow: auto;
+}
+.select.float .menu.top{bottom: 0;}
+.select.float .menu.bottom{top: 0;}
+
+.select.float .option{float: left; width: 100%; padding: 10px; cursor: pointer;}
+.select.float .option:hover{background-color: #ccc;}
+
+.select.float .selected{background-color: blue; color: white;}
+.select.float .top .selected{order: 1;}
+.select.float .bottom .selected{order: -1;}

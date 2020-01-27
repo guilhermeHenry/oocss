@@ -1,4 +1,4 @@
-const colors = ['red', 'green', 'yellow', 'purple'];
+const colors = ['red', 'green', 'yellow', 'purple', 'blue', 'orange'];
 
 document.getElementById('main-checkbox-colors').querySelectorAll('input').forEach(input => {
 	// if (input.hasAttribute('checked')){styles.color = input.value}

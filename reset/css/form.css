@@ -1,0 +1,9 @@
+/* FORM: (Deprecated: menu, Obsolete: dir, Obsolete: big) */
+input, select, button, textarea{
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+textarea{resize: none;}
+input[type="button"], select, button{cursor: pointer;}
+input[type="button"]:disabled, button:disabled, select:disabled{cursor: default;}

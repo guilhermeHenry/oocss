@@ -3,6 +3,7 @@
 	https://www.cssscript.com/demo/csscss3-custom-checkboxes-radios-switches-el-checkbox/
 */
 body{font-family: roboto;}
+
 .main-checkbox-menu{
 	float: left;
 	width: 100%;
@@ -30,6 +31,7 @@ body{font-family: roboto;}
 	width: 40px;
 	height: 40px;
 	border-radius: 50px;
+	background: var(--color);
 }
 #main-checkbox-colors input::after{
 	content: attr(title);
@@ -39,12 +41,6 @@ body{font-family: roboto;}
 	font-weight: 500;
 	text-transform: capitalize;
 }
-
-#main-checkbox-colors .green::before{background-color: #27C86B;}
-#main-checkbox-colors .red::before{background-color: #FE5944;}
-#main-checkbox-colors .yellow::before{background-color: #FFA40A;}
-#main-checkbox-colors .purple::before{background-color: #9B58B7;}
-
 
 .checkbox.form{
 	width: 1150px;

@@ -1,0 +1,16 @@
+/*retilizável*/
+.checkbox .red{--color: #FE5944;}
+.checkbox .green{--color: #8CE196;}
+.checkbox .yellow{--color: #FBBF13;}
+.checkbox .orange{--color: #FF9700;}
+.checkbox .purple{--color: #9B58B7;}
+.checkbox .blue{--color: #03A9F5;}
+
+.checkbox input{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+     appearance:        none;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}

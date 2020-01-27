@@ -1,0 +1,33 @@
+.fl-left {
+  float: left;
+}
+
+.fl-right {
+  float: right;
+}
+
+.fl-none {
+  float: none;
+}
+
+.fl-inline-start {
+  float: inline-start;
+}
+
+.fl-inline-end {
+  float: inline-end;
+}
+
+.fl-inherit {
+  float: inherit;
+}
+
+.fl-initial {
+  float: initial;
+}
+
+.fl-unset {
+  float: unset;
+}
+
+/*# sourceMappingURL=float.css.map */

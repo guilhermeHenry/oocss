@@ -21,11 +21,11 @@
 @import '../styles/buttons/gradient';
 
 // form
-@import '../styles/form/inputs/form';
-@import '../styles/form/checkbox/checkbox';
+@import '../styles/form/inputs/include';
+@import '../styles/form/checkbox/include';
 
 //node modules
-@import '../node_modules/css-reset/reset';
+@import '../reset/include';
 
 hr[title].title-line{
 	float: left;

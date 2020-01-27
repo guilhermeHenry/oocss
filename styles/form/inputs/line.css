@@ -1,0 +1,118 @@
+
+.input.line{float: left; width: 100%; background-color: #f6f6f6; margin-top: 30px; border-radius: 5px;}
+.input.line .field{
+	border: 0;
+	float: left;
+	width: 100%;
+	font-size: inherit;
+	background-color: transparent;
+	border-bottom: 1px solid #ebebeb;
+	font-size: .880em;
+}
+
+
+.input.line.f18 .field{padding: 22px 5px 8px 15px;}
+.input.line.f18 .legend{left: 15px;}
+
+.input.line.f20 .field{padding: 15px;}
+
+.input.line.f22 .field{padding: 22px 5px 8px 15px; font-weight: 300;}
+.input.line.f22 .legend{left: 15px; font-weight: 300;}
+
+.input.line label{position: relative; float: left; width: 100%;}
+.input.line label:first-child .field{border-top-left-radius: inherit; border-top-right-radius: inherit;}
+.input.line label:last-child .field{border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; border-bottom: 0;}
+
+.input.line label .legend{
+	position: absolute;
+	left: 0;
+	cursor: text;
+	height: 20px;
+	line-height: 20px;
+	font-size: inherit;
+	transition-duration: .2s;
+	transition-property: margin, top;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.input.line .field::-webkit-input-placeholder {opacity: 0;}
+
+.input.line .field:not(:placeholder-shown) + .legend,
+.input.line .field:focus + .legend {
+	color: #999;
+	cursor: default;
+	font-weight: 500;
+	font-size: 12px;
+	margin-top: 4px;
+	top: 0;
+}
+
+.input.line .field:focus + .legend{color: blue;}
+.input.line .field:focus::-webkit-input-placeholder {opacity: 1;}
+
+/*white*/
+.input.line.white{border: 1px solid #eee; background-color: white;}
+.input.line.white .field{border-bottom-color: #eee;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
