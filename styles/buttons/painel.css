@@ -2,62 +2,113 @@
 @import url('../../css/parts/padding.css');
 
 /*https://1stwebdesigner.com/free-code-snippets-css-buttons/*/
-body{
-	font-family: roboto;
-	position: fixed;
-	width: 100%;
+
+.oocss-buttons-painel{
+	width: 1300px;
+	margin: 30px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 120px 75px 140px 50px 180px;
+	grid-gap: 20px;
+}
+
+.oocss-buttons-painel article{
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.oocss-buttons-painel article > header{
+	padding: 6px 10px;
+	background-color: #f3f3f3;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	border-bottom: 1px solid #e9e9e9;
+	text-align: center;
+}
+.oocss-buttons-painel article > header h1{
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.oocss-buttons-painel article:nth-of-type(1){
+	grid-row: 5 span;
+}
+
+
+.oocss-buttons-painel article:nth-of-type(3){
+	grid-row: 1 span;
+}
+.oocss-buttons-painel .box8{
+	grid-row: 4 span;
+}
+
+/*## STYLES*/
+.oocss-buttons-painel-styles .content{
+	padding-top: 5px;
+	padding-left: 15px;
 	height: 100%;
-	display: grid;
-}
-
-.painel{
-	width: 1200px;
-	margin: 40px auto;
-	display: grid;
-	grid-template-columns: 300px auto 340px;
-}
-
-.center{display: flex;}
-.center button{margin: auto; width: 200px;}
-
-.title{
-	float: left;
-	width: 100%;
-	margin: 20px 0 10px 0;
-}
-
-#button-size{float: left; width: 100%; display: flex; margin-bottom: 20px; border: 1px solid #0581FD; border-radius: 3px;}
-#button-size input{float: left; width: 100%; color: #0581FD; text-align: center; padding: 2px 0; font-size: 14px; cursor: pointer; border-right: 1px solid #0581FD;}
-#button-size input:last-child{border-right: 0;}
-#button-size input::before{content: attr(text);}
-#button-size input:checked{background-color: #0581FD; color: white;}
-
-/*button-styles*/
-#button-styles{
-	float: left;
-	width: 100%;
-}
-#button-styles label{
-	float: left;
-	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	overflow: auto;
+	flex-direction: column;
+	height: calc(100% - 30px);
+}
+
+.oocss-buttons-painel-styles .content .item{
+	display: grid;
 	align-items: center;
-	border-bottom: 1px solid #f1f1f1;
-	padding: 15px 0;
+	grid-column-gap: 15px;
+	grid-template-columns: 15px 120px 1fr;
 }
 
-#button-styles label:last-child{border-bottom: 0;}
-#button-styles span{min-width: 130px;}
+.oocss-buttons-painel-styles .content .item::before{
+	content: attr(index);
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	position: relative;
+	top: 1px;
+}
+.oocss-buttons-painel-styles .content .item.active::before
+{
+	content: "\e935";
+    font-family: 'icomoon' !important;
+    speak: none;
+    line-height: 1;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-/*COLORS*/
-#button-colors{
-	float: left;
-	width: 100%;
+.oocss-buttons-painel-styles .content .item button{
+	padding: 7px 0;
+}
+
+
+.oocss-buttons-painel-styles .content .item:first-child aside{border-top: 0;}
+.oocss-buttons-painel-styles .content .item aside{
 	display: flex;
+	padding: 10px 3px;
+	flex-direction: column;
+	border-top: 1px solid #eee;
 }
 
-#button-colors input{
+.oocss-buttons-painel-styles .content .item aside em{
+	font-size: 14px;
+}
+
+/*## COLORS*/
+.oocss-buttons-painel-colors .content{
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+}
+
+.oocss-buttons-painel-colors .content input{
 	float: left;
 	width: 100%;
 	text-align: center;
@@ -69,8 +120,8 @@ body{
 	cursor: pointer;
 }
 
-#button-colors input:checked{border-color: #e1e1e1; box-shadow: 0 0 0 2px #f1f1f1;}
-#button-colors input:before{
+.oocss-buttons-painel-colors .content input:checked{border-color: #06c; box-shadow: 0 0 0 2px #f1f1f1;}
+.oocss-buttons-painel-colors .content input:before{
 	content: '';
 	display: inline-block;
 	vertical-align: bottom;
@@ -80,99 +131,279 @@ body{
 	background: red;
 }
 
-#button-colors input::after{
+.oocss-buttons-painel-colors .content input::after{
 	content: attr(value);
 	font-size: 14px;
 	display: block;
 	padding-top: 4px;
 }
-#button-colors input[value=red]:before{background-color: #fa5a5a;}
-#button-colors input[value=yellow]:before{background-color: #f0d264;}
-#button-colors input[value=blue]:before{background-color: #6698cb;}
-#button-colors input[value=green]:before{background-color: #82c8a0;}
-#button-colors input[value=purple]:before{background-color: #cb99c5;}
-#button-colors input[value=gray]:before{background-color: #f1f1f1;}
-#button-colors input[value=cyan]:before{background-color: #7fccde;}
+.oocss-buttons-painel-colors .content input[value=red]:before{background-color: #fa5a5a;}
+.oocss-buttons-painel-colors .content input[value=yellow]:before{background-color: #f0d264;}
+.oocss-buttons-painel-colors .content input[value=blue]:before{background-color: #6698cb;}
+.oocss-buttons-painel-colors .content input[value=green]:before{background-color: #82c8a0;}
+.oocss-buttons-painel-colors .content input[value=purple]:before{background-color: #cb99c5;}
+.oocss-buttons-painel-colors .content input[value=gray]:before{background-color: #f1f1f1;}
+.oocss-buttons-painel-colors .content input[value=cyan]:before{background-color: #7fccde;}
 
-/*tx-color*/
-#tx-color{float: left; width: 100%; background-color: #f9f9f9; padding: 5px; margin-top: 15px; border-radius: 5px;
-	display: flex;
-	position: relative;
-}
-#tx-color .left{width: 120px; line-height: 32px; font-size: 15px; font-weight: 500; text-align: center;}
-#tx-color .center{}
-#tx-color .right{width: 80px; text-align: center;}
-#tx-color .right input{margin: 4px 0;}
 
-#tx-color:before{
-	content: '';
-	right: 20px;
-	top: -8px;
-	position: absolute;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-bottom: 8px solid #f9f9f9;
+/*## CODE*/
+.oocss-buttons-painel-code .content{
+	padding: 5px 10px 5px 5px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 60px;
+	grid-column-gap: 10px;
 }
 
-
-
-.controllers{float: left; width: 100%; display: grid; grid-template-columns: 1fr; grid-gap: 10px 5px;}
-.controllers label{display: flex;}
-.controllers label .left{width: 100px; line-height: 30px; font-size: 15px; font-weight: 500;}
-.controllers label .center{}
-.controllers label .right{width: 80px;}
-.controllers label .right input{margin-top: 5px; float: right;}
-.controllers label div{float: left; width: 100%;}
-
-.input{float: left; width: 100%;}
-.input input[type="text"],
-.input input[type="number"]{
-	float: left;
-	width: 100%;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	box-shadow: 0 1px 1px inset rgba(0, 0, 0, .05);
-	padding: 6px;
-}
-
-
-
-.input[title]::before{
-	content: attr(title);
-	display: block;
+.oocss-buttons-painel-code .content input {
+	padding: 10px 5px;
+	background-color: #eee;
+	color: #666;
+	border-radius: 4px;
 	font-size: 14px;
-	color: #222;
-	font-weight: 500;
-	padding-left: 2px;
-	padding-bottom: 3px;
-} 
-
-.painel > section footer{
-	padding: 10px;
-	margin-top: 5px;
-	float: left;
+	border: 0;
 	width: 100%;
+	background-color: white;
+	border: 1px solid #eee;
 	text-align: center;
 }
-.painel > section  footer > hr{float: right; width: 50px; border: 0; background-color: #f9f9f9; height: 35px; line-height: 33px; font-size: 18px; cursor: pointer;}
-.painel > section  footer > button{float: left; height: 35px; width: calc(100% - 55px);}
-.painel > section  footer > pre{float: left; width: 100%; padding: 10px 0;}
 
-
-pre {
-	width: 100%;
-	padding: 30px;
-	color: #666;
-	border-radius: 0 0 4px 4px;
-	margin-top: 20px;
-	 font-size: 14px;
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+.oocss-buttons-painel-code .content button{
+	border: 0;
+	color: white;
+	height: 30px;
+	font-size: 14px;
+	border-radius: 5px;
+	background-color: #06C;
 }
-pre .bt  {color: #f8f8f2;} /* <> */
-pre .anc {color: #f92672;} /* anchor tag */
-pre .att {color: #1c7f1c;} /* attribute */
-pre .val {color: #c95b13;} /* value */
+
+/*## LIST*/
+.oocss-buttons-painel-list .content{
+	display: grid;
+	grid-gap: 3px;
+	grid-template-columns: 1fr;
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+.oocss-buttons-painel-list .content li{}
+
+/*## OVERVIEW*/
+.oocss-buttons-painel-overview{display: flex;}
+.oocss-buttons-painel-overview button{margin: auto;}
+
+/*## SIZE*/
+.oocss-buttons-painel-size .content{float: left; width: 100%; display: flex; margin-bottom: 20px;
+	border: 1px solid #ddd; border-top-color: #ddd; border-radius: 5px;}
+.oocss-buttons-painel-size .content input{
+	float: left; width: 100%; color: #222; font-weight: 500;
+	text-align: center; padding: 3px 0; font-size: 14px; cursor: pointer; border-left: 1px solid #dbddbd;}
+.oocss-buttons-painel-size .content input:first-child{border-left: 0;}
+.oocss-buttons-painel-size .content input::before{content: attr(text);}
+.oocss-buttons-painel-size .content input:checked{background-color: #e3e3e3; border-left-color: #ddd;}
+.oocss-buttons-painel-size .content input:checked + input{border-left-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
