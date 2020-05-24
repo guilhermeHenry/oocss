@@ -1,0 +1,11 @@
+// sass --watch scss/base/color.scss css/base/color.css
+
+@import '../app.scss';
+@include element("color", "tx", $colors);
+
+// BG 111 - 999
+@for $size from 0 through 9{
+	.tx-#{$size}#{$size}#{$size}{
+		color: ##{$size}#{$size}#{$size};
+	}
+}

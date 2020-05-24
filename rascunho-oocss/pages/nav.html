@@ -1,0 +1,7 @@
+<nav class="main-nav">
+	{loop="$links"}
+	{if="$key != '404'"}
+	<a {if="$active === $key"}class="active"{/if} href="index.php&action={$key}">{$value}</a>
+	{/if}
+	{/loop}
+</nav>

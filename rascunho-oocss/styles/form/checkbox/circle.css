@@ -1,0 +1,16 @@
+
+/*CIRCLE*/
+.checkbox .circle{
+    transition: background .3s;
+    border-radius: 50px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+.checkbox .circle.p3{border: 6px solid #3389F1;}
+.checkbox .circle:checked{background-color: white; box-shadow: none;}
+
+.checkbox .circle:disabled{border-color: white;}
+.checkbox .circle:disabled:checked{border-color: white; background-color: #ccc; box-shadow: 0 0 0 1px #ccc;}

@@ -1,0 +1,14 @@
+// ## TEXT TRANSFORM
+// sass sass/base/text-transform.scss sass/cache/text-transform.css --no-source-map
+// https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-transform
+@import '../app.scss';
+
+/* Keyword values */
+.tx-cap{text-transform: capitalize;}
+.tx-upper{text-transform: uppercase;}
+.tx-lower{text-transform: lowercase;}
+.tx-full-width{text-transform: full-width;}
+
+/* Valores globais */
+.in-text-transform{text-transform: inherit;}
+.no-text-transform{text-transform: none;}

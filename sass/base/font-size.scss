@@ -1,0 +1,9 @@
+// sass scss/base/font-size.scss css/base/font-size.css
+// sass --watch  scss/base/font-size.scss css/base/font-size.css
+@for $size from 0 through 60{
+	$calc: $size / 16;
+
+	.f#{$size}{
+		font-size: #{$calc}em;
+	}
+}

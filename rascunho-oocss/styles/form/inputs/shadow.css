@@ -1,0 +1,13 @@
+.iput-grey{
+	border-radius: 3px;
+	border: 1px solid #e1e1e1;
+}
+
+.input.shadow .legend{
+	color: #666;
+	font-size: 14px;
+	font-weight: 500;
+	padding-left: 2px;
+	text-align: right;
+	padding-bottom: 3px;
+}

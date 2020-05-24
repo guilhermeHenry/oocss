@@ -1,0 +1,3 @@
+// sass --watch  scss/base/margin.scss css/cache/margin.css
+@import '../app.scss';
+@include prop("margin", "m");

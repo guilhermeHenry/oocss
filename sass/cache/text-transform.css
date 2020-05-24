@@ -1,0 +1,24 @@
+.tx-capitalize {
+  text-transform: capitalize;
+}
+
+.tx-uppercase {
+  text-transform: uppercase;
+}
+
+.tx-lowercase {
+  text-transform: lowercase;
+}
+
+.tx-full-width {
+  text-transform: full-width;
+}
+
+/* Valores globais */
+.in-text-transform {
+  text-transform: inherit;
+}
+
+.no-text-transform {
+  text-transform: none;
+}

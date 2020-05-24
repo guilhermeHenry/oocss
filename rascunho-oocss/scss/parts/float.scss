@@ -1,0 +1,12 @@
+// sass --watch  scss/parts/float.scss css/parts/float.css
+@import './app.scss';
+@include element('float', 'fl', (
+	left, 
+	right, 
+	none, 
+	inline-start, 
+	inline-end, 
+	inherit, 
+	initial, 
+	unset
+));

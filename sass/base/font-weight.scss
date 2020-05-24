@@ -1,0 +1,11 @@
+// ##FONT WEIGHT
+// sass sass/base/font-weight.scss sass/cache/font-weight.css --no-source-map
+@each $weight in 100, 200, 300, 400, 500, 600, 700, 800, 900{
+	.f#{$weight}{
+		font-weight: #{$weight};
+	}
+}
+
+/* Valores globais */
+.in-font-weight{font-weight: inherit;}
+.no-font-weight{font-weight: initial;}

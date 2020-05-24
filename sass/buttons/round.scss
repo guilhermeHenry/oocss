@@ -1,0 +1,20 @@
+.btn-round{
+	border: 0;
+	color: white;
+	border-radius: 50px;
+	background-color: #eee;
+	color: #222;
+
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+}
+
+.btn-round.red 	  {background: #E35252; color: white;}
+.btn-round.orange {background: #E8601B; color: white;}
+.btn-round.cyan   {background: #169499; color: white;}
+.btn-round.blue   {background: #007AFF; color: white;}
+.btn-round.purple {background: #BD8EB7; color: white;}
+.btn-round.yellow {background: #DBC05B; color: white;}
+.btn-round.green  {background: #72B08E; color: white;}

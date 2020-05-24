@@ -1,0 +1,15 @@
+// sass --watch  scss/base/border-radius.scss css/base/border-radius.css
+
+@each $radius in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30, 50, 100 {
+	.r#{$radius}{
+		-webkit-border-radius: #{$radius}px;
+		   -moz-border-radius: #{$radius}px;
+				border-radius: #{$radius}px;
+	}
+}
+
+.no-radius{
+	-webkit-border-radius: 0px;
+	   -moz-border-radius: 0px;
+	 	    border-radius: 0px;
+}

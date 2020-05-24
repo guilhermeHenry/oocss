@@ -1,0 +1,3 @@
+// sass --watch scss/base/background-color.scss css/base/background-color.css
+@import '../app.scss';
+@include element("background-color", "bg", $colors);

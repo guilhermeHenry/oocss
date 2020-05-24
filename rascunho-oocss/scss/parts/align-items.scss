@@ -1,0 +1,19 @@
+// sass --watch scss/parts/align-items.scss css/parts/align-items.css
+// LINK https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-items
+@import 'app.scss';
+@include element("align-items", "al", (
+	// Palavras-chave básicas
+	"normal",
+	"stretch",
+	// Posicionamento do alinhamento. NOTA:: align-items não recebe valores left e right
+	"end",		  /* Posiciona itens a partir do fim */ 
+	"start",	  /* Posiciona itens a partir do início */ 
+	"center",	  /* Itens posicionados ao redor do centro */ 
+	"flex-end",   /* Posiciona itens-flex a partir do fim */ 
+	"flex-start", /* Posiciona itens-flex a partir do início */ 
+	"self-start",
+	"self-end"
+));
+
+
+

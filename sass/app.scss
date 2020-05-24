@@ -1,0 +1,96 @@
+$colors: 'snow', 'ghostwhite', 'whitesmoke', 'gainsboro', 'floralwhite', 'oldlace', 'linen', 'antiquewhite', 'papayawhip', 'blanchedalmond', 'bisque', 'peachpuff', 'navajowhite', 'moccasin', 'cornsilk', 'ivory', 'lemonchiffon', 'seashell', 'honeydew', 'mintcream', 'azure', 'aliceblue', 'lavender', 'lavenderblush', 'mistyrose', 'white', 'black', 'darkslategray', 'dimgrey', 'slategrey', 'lightslategray', 'grey', 'lightgray', 'midnightblue', 'navyblue', 'cornflowerblue', 'darkslateblue', 'slateblue', 'mediumslateblue', 'lightslateblue', 'mediumblue', 'royalblue', 'blue', 'dodgerblue', 'deepskyblue', 'skyblue', 'lightskyblue', 'steelblue', 'lightsteelblue', 'lightblue', 'powderblue', 'paleturquoise', 'darkturquoise', 'mediumturquoise', 'turquoise', 'cyan', 'lightcyan', 'cadetblue', 'mediumaquamarine', 'aquamarine', 'darkgreen', 'darkolivegreen', 'darkseagreen', 'seagreen', 'mediumseagreen', 'lightseagreen', 'palegreen', 'springgreen', 'lawngreen', 'green', 'chartreuse', 'medspringgreen', 'greenyellow', 'limegreen', 'yellowgreen', 'forestgreen', 'olivedrab', 'darkkhaki', 'palegoldenrod', 'ltgoldenrodyello', 'lightyellow', 'yellow', 'gold', 'lightgoldenrod', 'goldenrod', 'darkgoldenrod', '', 'rosybrown', 'indianred', 'saddlebrown', 'sienna', 'peru', 'burlywood', 'beige', 'wheat', 'sandybrown', 'tan', 'chocolate', 'firebrick', 'brown', 'darksalmon', 'salmon', 'lightsalmon', 'orange', 'darkorange', 'coral', 'lightcoral', 'tomato', 'orangered', 'red', 'hotpink', 'deeppink', 'pink', 'lightpink', 'palevioletred', 'maroon', 'mediumvioletred', 'violetred', 'magenta', 'violet', 'plum', 'orchid', 'mediumorchid', 'darkorchid', 'darkviolet', 'blueviolet', 'purple', 'mediumpurple', 'thistle', 'snow', 'snow', 'snow', 'snow', 'seashell', 'seashell', 'seashell', 'seashell', 'antiquewhite', 'antiquewhite', 'antiquewhite', 'antiquewhite', 'bisque', 'bisque', 'bisque', 'bisque', 'peachpuff', 'peachpuff', 'peachpuff', 'peachpuff', 'navajowhite', 'navajowhite', 'navajowhite', 'navajowhite', 'lemonchiffon', 'lemonchiffon', 'lemonchiffon', 'lemonchiffon', 'cornsilk', 'cornsilk', 'cornsilk', 'cornsilk', 'ivory', 'ivory', 'ivory', 'ivory', 'honeydew', 'honeydew', 'honeydew', 'honeydew', 'lavenderblush', 'lavenderblush', 'lavenderblush', 'lavenderblush', 'slategray', 'lightsteelblue', 'lightsteelblue', 'lightsteelblue', 'lightsteelblue', 'lightblue', 'lightblue', 'lightblue', 'lightblue', 'lightcyan', 'lightcyan', 'lightcyan', 'lightcyan', 'paleturquoise', 'paleturquoise', 'paleturquoise', 'paleturquoise', 'cadetblue', 'cadetblue', 'cadetblue', 'cadetblue', 'turquoise', 'turquoise', 'turquoise', 'turquoise', 'cyan', 'cyan', 'cyan', 'cyan', 'darkslategray', 'darkslategray', 'darkslategray', 'darkslategray', 'aquamarine', 'aquamarine', 'aquamarine', 'aquam';
+
+@mixin element($name, $prefix, $values){
+	@each $value in $values {
+		.#{$prefix}-#{$value}{
+			#{$name}: #{$value};
+		}
+	}
+}
+// prop(padding, p)
+@mixin prop($name, $prefix){
+	$arr: (t: top, r: right, b: bottom, l: left);
+	
+	@for $size from 0 through 50{
+		@if $size == 0{
+			/* --- No Padding --- */
+			.no-#{$name} {#{$name}: 0;}
+		} @else{
+			/* --- Padding #{$size}px --- */
+			.#{$prefix}#{$size} {#{$name}: #{$size}px;}
+		}
+
+		@each $side in map-keys($arr){
+			.#{$prefix}#{$size}#{$side}{
+				#{$name}-#{map-get($arr, $side)}:  #{$size}px;
+			}
+		}
+
+		.#{$prefix}#{$size}tb{#{$name}-top:  #{$size}px; #{$name}-bottom:  #{$size}px;}
+		.#{$prefix}#{$size}lr{#{$name}-left:  #{$size}px; #{$name}-right:  #{$size}px;}
+	}
+}
+
+
+// _   _   _
+//|_| |_| |_|
+//	   _
+// 1º |_| nome da cor
+// 2º |_| repete o Nome da cor
+// 3º |_| (1-9)
+
+// $repeat, $max, $prefix: null, $sufix: null
+// @function multiply($arguments) {
+// 	$max    : map-get($arguments, max);
+// 	$repeat : map-get($arguments, repeat);
+// 	$prefix : map-get($arguments, prefix);
+// 	$sufix  : map-get($arguments, sufix);
+
+// 	@if not map-has-key($arguments, max){$max: 1;}
+
+// 	$result: $prefix;
+
+// 	@for $i from 0 to $max {
+// 		$result: $result + $repeat; //ee
+// 	}
+
+// 	@if ($sufix == 0){
+// 		@return $result + $repeat;
+// 	} @else{
+// 		@return $result + $sufix;
+// 	}
+
+	
+// }
+
+// $colors: (
+// 	black: (
+// 		name: (prefix: b, max: 2), 
+// 		prop: (max: 3)
+// 	)
+// );
+
+// @each $title, $value in $colors{
+// 	$name: map-get($value, name);
+// 	$prop: map-get($value, prop);
+	 
+// 	@for $i from 1 to 9 {
+// 		.#{multiply(map-merge($name, (repeat: $i, max: 2)))} {
+// 			background-color: ##{multiply(map-merge($prop, (repeat: $i)))};
+// 		}
+// 	}
+// }
+
+
+// @each $item in (repeat: e, max: 2), (repeat: f, max: 2){
+// 	@for $i from 0 through 9{
+// 		.#{multiply(map-merge($item, (sufix: $i)))}{
+// 			background-color: ##{multiply(map-merge($item, (sufix: $i)))};
+// 		}
+// 	}
+// }
+
+
+// @each $nx in $colorNames {
+// 	#{$nx} {background-color: #{$nx};}
+// }

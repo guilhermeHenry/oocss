@@ -1,0 +1,10 @@
+// sass --watch sass/base/text-decoration.scss css/cache/text-decoration.css
+// https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-decoration
+$decoration: "underline", "overline", "line-through";
+
+@import '../app.scss';
+@include element("text-decoration", "tx", $decoration);
+
+.no-decoration {
+  text-decoration: none;
+}

@@ -1,0 +1,41 @@
+.tx-left {
+  text-align: left;
+}
+
+.tx-right {
+  text-align: right;
+}
+
+.tx-center {
+  text-align: center;
+}
+
+.tx-justify {
+  text-align: justify;
+}
+
+.tx-justify-all {
+  text-align: justify-all;
+}
+
+.tx-start {
+  text-align: start;
+}
+
+.tx-end {
+  text-align: end;
+}
+
+.tx-match-parent {
+  text-align: match-parent;
+}
+
+.tx-unset {
+  text-align: unset;
+}
+
+.no-tx-align {
+  text-align: initial;
+}
+
+/*# sourceMappingURL=text-align.css.map */
