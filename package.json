@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/guilhermeHenry/oocss.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["oocss"],
+  "author": "guilhermeHenry",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guilhermeHenry/oocss/issues"
