@@ -1,0 +1,43 @@
+/*GO*/
+.switch1{
+    border-radius: 20px;
+    transition: background .5s;
+    background-color: #f1f1f1;
+    
+    @include reset-list;
+
+    &:before{
+      content: '';
+      top: 0;
+      left: 0;
+      top: 50%;
+      transition: left .2s;
+      background: white;
+      position: absolute;
+      border-radius: 20px;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@each $name, $value in $colors{
+    .switch1.#{$name}:checked{background-color: $value;}
+}
+
+@for $i from 8 through 30 {
+    $top: $i + 2;
+    $width:  ($i * 3) + 5;
+    $left:  ($width - $i) - 5;
+    $left-initial: $i - 5;
+
+    $circle: ($i * 2) + 3;
+    $legend: $i * 2 + 2;
+    $padding: '.p#{$i}';
+    
+    .switch1#{$padding}{width: #{$width}px;}
+    .switch1#{$padding}::before{height: #{$circle}px; width: #{$circle}px; margin-top: -#{$top}px;
+      left: -#{$i}px;
+    }
+    .switch1#{$padding}:checked:before{left: #{$left}px;}
+    .switch1#{$padding} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+}
+

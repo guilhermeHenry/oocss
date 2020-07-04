@@ -1,0 +1,48 @@
+/*ROUND*/
+.switch2{
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    transition-property: background;
+    transition-duration: .4s;
+    background-color: white;
+
+    @include reset-list;
+}
+
+.switch2::before{
+    content: '';
+    position: absolute;
+    border-radius: 50px;
+    top: -2px;
+    left: -1px;
+    background: white;
+    border: 1px solid #ccc;
+    transition-property: left;
+    transition-duration: .2s;
+}
+
+@each $name, $value in $colors{
+    .switch2.#{$name}:checked:before{border-color: $value;}
+    .switch2.#{$name}:checked{background-color: $value; border-color: $value;}
+}
+
+.switch2:disabled{background-color: #eee; box-shadow: none;}
+.switch2:disabled:checked{background-color: #eee; border-color: #ccc;}
+.switch2:disabled:checked:before{border-color: #ccc;}
+
+
+@for $i from 8 through 30 {
+    $left:   $i + 3;
+    $width:  ($i * 3 + 5) + 2;
+    $circle: ($i * 2) + 2;
+    $legend: $i * 2 + 2;
+    $padding: '.p#{$i}';
+
+    // DEFAULT
+    .switch2#{$padding}{width: #{$width}px;}
+    .switch2#{$padding}::before{height: #{$circle}px; width: #{$circle}px;}
+    .switch2#{$padding}:checked:before{left: #{$left}px;}
+    .switch2#{$padding} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+}
+
+

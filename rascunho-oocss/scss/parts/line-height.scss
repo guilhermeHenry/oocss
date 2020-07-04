@@ -1,7 +1,0 @@
-// sass scss/parts/repeat/line-height.scss css/parts/repeat/line-height.css
-// sass --watch scss/parts/line-height.scss css/parts/line-height.css
-@for $x from 1 through 50 {
-	.l#{$x}{
-		line-height: #{$x/16}em;
-	}
-}

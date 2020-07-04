@@ -1,4 +1,8 @@
-body{font-family: roboto;}
+body{
+	font-family: roboto;
+	background-color: #f1f1f1;
+}
+
 [center]{
 	width: 600px;
 	height: auto;
@@ -8,7 +12,13 @@ body{font-family: roboto;}
 h1{margin-bottom: 15px; margin-top: 30px;}
 button{margin-right: 25px;}
 
-
+body > article{
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: white;
+	text-align: center;
+}
 
 
 

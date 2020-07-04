@@ -1,20 +1,42 @@
+/**
+  * sass sass/base/display.scss sass/cache/display.css --watch --no-source-map
+  * [sass array](https://www.sitepoint.com/sass-maps-vs-nested-lists) */
+  
 $display: (
-	none, 
+	none,
 	block,
-	table, 
-	inline, 
-	run-in, 
-	table-row, 
-	list-item, 
-	table-cell, 
-	table-column, 
-	inline-block, 
-	inline-table, 
-	table-row-group, 
-	grid, inline-grid, 
-	table-column-group, 
-	table-footer-group, 
-	table-header-group, 
-	flex, inline-flex, 
+	table,
+	inline,
+	run-in,
+	table-row,
+	list-item,
+	table-cell,
+	table-column,
+	inline-block,
+	inline-table,
+	table-row-group,
+	grid, inline-grid,
+	table-column-group,
+	table-footer-group,
+	table-header-group,
+	flex, inline-flex,
 	inherit
 );
+
+@each $prop in $display{
+	.ds-#{$prop}{
+		display: #{$prop};
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

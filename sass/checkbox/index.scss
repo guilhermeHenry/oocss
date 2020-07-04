@@ -1,0 +1,30 @@
+/**
+  * sass sass/checkbox/style.scss sass/checkbox/style.css --watch --no-source-map
+  */
+$colors: (
+	"red": 	#FE5944,
+	"green":  #8CE196,
+	"yellow": #FBBF13,
+	"orang":  #FF9700,
+	"purple": #9B58B7,
+	"blue":   #03A9F5
+);
+
+@mixin reset-list {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+}
+
+@import 'mark';
+@import 'circle';
+
+// SWITCH
+@import 'switch';
+@import 'switch1';
+@import 'switch2';
+@import 'switch3';
+@import 'switch4';

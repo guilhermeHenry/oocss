@@ -1,4 +1,4 @@
-// sass --watch sass/base/text-align.scss css/cache/text-align.css
+// sass sass/base/text-align.scss sass/cache/text-align.css  --watch --no-source-map
 
 @import '../app.scss';
 @include element("text-align", "tx", (

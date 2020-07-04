@@ -1,0 +1,23 @@
+.btn2{
+	border: 0;
+	color: white;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+	color: #222;
+
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+
+	@include btn;
+
+
+	&.red 	 {background: #E35252; color: white;}
+	&.orange {background: #E8601B; color: white;}
+	&.cyan   {background: #169499; color: white;}
+	&.blue   {background: #007AFF; color: white;}
+	&.purple {background: #BD8EB7; color: white;}
+	&.yellow {background: #DBC05B; color: white;}
+	&.green  {background: #72B08E; color: white;}
+}

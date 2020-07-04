@@ -1,0 +1,30 @@
+/**
+  * sass sass/reset/style.scss sass/reset/style.css --watch --no-source-map
+  */
+
+*{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
+
+/* ## FORM: (Deprecated: menu, Obsolete: dir, Obsolete: big) */
+input, select, button, textarea{outline: none; font-size: inherit; font-family: inherit;}
+textarea{resize: none;}
+input[type="button"], select, button{cursor: pointer;}
+input[type="button"]:disabled, button:disabled, select:disabled{cursor: default;}
+
+/* ## TEXT */
+a{text-decoration: none; color: inherit;}
+li{list-style: none;}
+abbr{text-decoration: none;}
+
+/*prop none*/
+.no-appearance{
+	-webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari 3.1+ */
+     -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+          user-select: none; /* Standard syntax */
+}

@@ -1,0 +1,44 @@
+/*
+	links
+	https://www.cssscript.com/demo/csscss3-custom-checkboxes-radios-switches-el-checkbox/
+*/
+body{
+	padding: 30px;
+	font-family: roboto;
+}
+
+body > section{
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin: 50px auto;
+	padding: 10px;
+}
+
+body > section label{
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+body > section label input{
+	margin-right: 8px;
+}
+
+
+body > section > h2{
+	margin-bottom: 10px;
+	border-bottom: 2px solid #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+

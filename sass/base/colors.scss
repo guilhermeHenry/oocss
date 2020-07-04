@@ -1,5 +1,4 @@
-// sass --watch scss/base/color.scss css/base/color.css
-
+// sass sass/base/colors.scss sass/cache/colors.css --watch --no-source-map
 @import '../app.scss';
 @include element("color", "tx", $colors);
 
@@ -9,3 +8,4 @@
 		color: ##{$size}#{$size}#{$size};
 	}
 }
+

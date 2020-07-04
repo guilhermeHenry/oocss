@@ -1,1 +1,14 @@
-.btn{text-decoration: none; text-align: center; cursor: pointer;}
+.btn{
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	background-image: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+	@include btn;
+
+	&:hover{
+		border-color: #bbb;
+	}
+
+	&:active{
+		background-image: linear-gradient(to top, #f9f9f9, #f1f1f1);
+	}
+}

@@ -1,0 +1,42 @@
+
+/*FLAT*/
+.switch4{
+    border: 1px solid;
+    border-radius: 20px;
+    transition: background .5s;
+    background-color: white;
+    border-color: #eee;
+    @include reset-list;
+
+    &:before{
+        content: '';
+        top: 2px;
+        left: 2px;
+        transition: left .2s, background .2s .1s;
+        background: white;
+        position: absolute;
+        border-radius: 20px;
+        background-color: #ddd;
+    }
+
+    @each $name, $value in $colors{
+        &.#{$name}:checked{
+            border-color: $value;
+            background-color: $value;
+        }
+        &.#{$name}:hover{border-color: $value;}
+        &.#{$name}:checked:before{background-color: white;}
+    }
+
+    @for $i from 8 through 30 {
+        $left:   ($i + 3) + 2;
+        $width:  ($i * 3) + 5;
+        $circle: ($i * 2) - 4;
+        $legend: ($i * 2) + 2;
+
+        &.p#{$i}{width: #{$width}px;}
+        &.p#{$i}::before{height: #{$circle}px; width: #{$circle}px;}
+        &.p#{$i}:checked:before{left: #{$left}px;}
+        &.p#{$i} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+    }
+}

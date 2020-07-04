@@ -1,0 +1,11 @@
+@mixin btn{
+	cursor: pointer;
+	text-align: center; 
+	text-decoration: none;
+}
+
+@import 'btn';
+@import 'btn1';
+@import 'btn2';
+@import 'btn3';
+@import 'btn4';

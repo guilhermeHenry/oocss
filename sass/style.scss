@@ -1,9 +1,0 @@
-// sass  --watch sass/oocss.scss css/oocss.css
-// sass  --watch sass/oocss.scss style.min.css --style compressed
-// sass  sass/style.scss style.min.css --style compressed --no-source-map
-
-@import 'reset/style.scss'; // ## RESET
-@import './triggers/style.scss'; // ## TRIGGERS
-
-@import './components/buttons.scss';  // ## BUTTONS
-@import './components/base.scss';     // ## BASE

@@ -1,0 +1,71 @@
+// [abpetkov](http://abpetkov.github.io/switchery/)
+// [willianjusten](https://willianjusten.com.br/criando-um-switch-button-com-css)
+// [sass - tips](https://desenvolvimentoparaweb.com/css/sass-dicas-parte-1/)
+
+/*WITHIN*/
+.switch3{
+    border-radius: 20px;
+    transition: background .5s;
+    background-color: #fff;
+    border: 1px solid #eee;
+    @include reset-list;
+}
+
+.switch3::before{
+    content: '';
+    top: 0;
+    left: 0;
+    transition-property: left;
+    transition-duration: .2s;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0,0,0, .2), 0 1px 4px rgba(0,0,0,0.1);
+}
+
+@each $name, $value in $colors{
+
+    @if $name == green {
+        .switch3:checked{
+            border-color: $value;
+            background-color: $value;
+        }
+    }
+
+    .switch3.#{$name}:checked{
+        border-color: $value;
+        background-color: $value;
+    }
+}
+
+.switch3:disabled{background-color: #eee;}
+.switch3:checked:disabled{background-color: #ccc;}
+
+@for $i from 8 through 30 {
+    $left:   $i + 3;
+    $width:  $i * 3 + 5;
+    $circle: $i * 2;
+    $legend: $i * 2 + 2;
+    $padding: '.p#{$i}';
+
+    // DEFAULT
+    @if $i == 12 {
+        .switch3{width: #{$width}px; padding: #{$i}px;}
+        .switch3::before{height: #{$circle}px; width: #{$circle}px;}
+        .switch3:checked:before{left: #{$left}px;}
+        .switch3 + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+    }
+
+    .switch3#{$padding}{width: #{$width}px;}
+    .switch3#{$padding}::before{height: #{$circle}px; width: #{$circle}px;}
+    .switch3#{$padding}:checked:before{left: #{$left}px;}
+    .switch3#{$padding} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+/* Gradient buttons */
+.btn3{
+	color: black;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	background: linear-gradient(#fafafa, #eee);
+
+	@include btn;
+	
+	/* Gradient - ugly css is ugly */
+	&.red{
+		color: white;
+		background: linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+		&:active{background: #E35252;}
+	}
+
+	&.orange {
+		color: white;
+		background: linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+		&:active {background: #E8601B;}
+	}
+
+	&.cyan{
+		color: white;
+		background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+		&:active{background: #169499;}
+	}
+
+	&.blue{
+		color: white;
+		background: linear-gradient(to bottom, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+		&:active{background: #608FBF;}
+	}
+
+	&.purple{
+		color: white;
+		background: linear-gradient(to bottom, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+		&:active {background: #BD8EB7;}
+	}
+
+	&.yellow{
+		color: white;
+		background: linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+		&:active {background: #DBC05B;}
+	}
+
+	&.green{
+		color: white;
+		background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+		&.green:active  {background: #72B08E;}
+	}
+}
