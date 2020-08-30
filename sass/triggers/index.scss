@@ -3,18 +3,29 @@
   * [sass array](https://www.sitepoint.com/sass-maps-vs-nested-lists) */
 
 $breakpoint-map: (
-  text:    (bg: #EDEDED,   color: #555555, border: #d7d7d7), // grey
-  error:   (bg: mistyrose, color: #cf301e, border: #ffc6c0), // blue
-  alert:   (bg: lavender,  color: #442fc5, border: #d3cdf7), // red
-  notice:  (bg: #e9f2f8,   color: #3a81b0, border: #cadfed), // purple
-  warning: (bg: #FFF3CD,   color: #856404, border: #edddae), // warning
-  success: (bg: #E5F6ED,   color: #00a650, border: #c2e5d2)  // green
+  text:    (bg-clim: #EDEDED,   bg-normal: #494949, color: #555555, border: #d7d7d7), // grey || black
+  error:   (bg-clim: mistyrose, bg-normal: #f36265, color: #cf301e, border: #ffc6c0), // red
+  alert:   (bg-clim: lavender,  bg-normal: #9b5cb6, color: #442fc5, border: #d3cdf7), // purple
+  notice:  (bg-clim: #e9f2f8,   bg-normal: #3586ff, color: #3a81b0, border: #cadfed), // blue
+  warning: (bg-clim: #FFF3CD,   bg-normal: #ffd85b, color: #856404, border: #edddae), // yellow
+  success: (bg-clim: #E5F6ED,   bg-normal: #00c05c, color: #00a650, border: #c2e5d2)  // green
 );
 
 @each $label, $map in $breakpoint-map {
 	.tg-#{$label}{
 		color: map-get($map, color);
-		background-color: map-get($map, bg);
+		background-color: map-get($map, bg-clim);
+		padding: 10px;
+		font-size: 18px;
+		border-radius: 5px;
+	}
+}
+
+// ####### TRIGGER 1
+@each $label, $map in $breakpoint-map {
+	.tg1-#{$label}{
+		color: white;
+		background-color: map-get($map, bg-normal);
 		padding: 10px;
 		font-size: 18px;
 		border-radius: 5px;
@@ -25,16 +36,13 @@ $breakpoint-map: (
 @each $label, $map in $breakpoint-map {
 	.tg2-#{$label}{
 		color: map-get($map, color);
-		background-color: map-get($map, bg);
+		background-color: map-get($map, bg-clim);
 		border: 1px solid map-get($map, border);
 		padding: 10px;
 		font-size: 18px;
 		border-radius: 5px;
 	}
 }
-
-
-
 
 
 

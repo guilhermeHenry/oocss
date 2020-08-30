@@ -19,6 +19,7 @@
         background-color: #ddd;
     }
 
+    // #### COLORS
     @each $name, $value in $colors{
         &.#{$name}:checked{
             border-color: $value;
@@ -28,6 +29,7 @@
         &.#{$name}:checked:before{background-color: white;}
     }
 
+    // ### SIZE
     @for $i from 8 through 30 {
         $left:   ($i + 3) + 2;
         $width:  ($i * 3) + 5;

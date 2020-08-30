@@ -9,61 +9,70 @@
     background-color: #fff;
     border: 1px solid #eee;
     @include reset-list;
-}
 
-.switch3::before{
-    content: '';
-    top: 0;
-    left: 0;
-    transition-property: left;
-    transition-duration: .2s;
-    background: white;
-    position: absolute;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 0 0 2px rgba(0,0,0, .2), 0 1px 4px rgba(0,0,0,0.1);
-}
+    &::before{
+        content: '';
+        top: 0;
+        left: 0;
+        transition-property: left;
+        transition-duration: .2s;
+        background: white;
+        position: absolute;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0 0 2px rgba(0,0,0, .2), 0 1px 4px rgba(0,0,0,0.1);
+    }
 
-@each $name, $value in $colors{
 
-    @if $name == green {
-        .switch3:checked{
+
+    @each $name, $value in $colors{
+
+        @if $name == green {
+            &:checked{
+                border-color: $value;
+                background-color: $value;
+            }
+        }
+
+        &.#{$name}:checked{
             border-color: $value;
             background-color: $value;
         }
     }
 
-    .switch3.#{$name}:checked{
-        border-color: $value;
-        background-color: $value;
+    &:disabled{background-color: #eee;}
+    &:checked:disabled{background-color: #ccc;}
+
+    @for $i from 8 through 30 {
+        $left:   $i;
+        $width:  $i * 3 + $i;
+        $circle: $i * 2; // Constant
+        $legend: $i * 2 + 2; // Constant
+
+        
+        &.p#{$i}{width: #{$width}px;}
+        &.p#{$i}::before{height: #{$circle}px; width: #{$circle}px;}
+        &.p#{$i}:checked:before{left: #{$left}px;}
+        &.p#{$i} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+
+        // DEFAULT
+        @if $i == 12 {
+            &{width: #{$width}px; padding: #{$i}px;}
+            &::before{height: #{$circle}px; width: #{$circle}px;}
+            &:checked:before{left: #{$left}px;}
+            & + .legend{height: #{$legend}px; line-height: #{$legend}px;}
+        }
+
+        @each $name, $value in ("small":  10, "normal":  15, "large":  20, "big":  25) {
+            @if $i == $value {
+                &.#{$name}{width: #{$width}px; padding: #{$value}px;}
+                &.#{$name}::before{height: #{$circle}px; width: #{$circle}px;}
+                &.#{$name}:checked:before{left: #{$left}px;}
+                &.#{$name} + .legend{height: #{$legend}px; line-height: #{$legend}px;}            
+            }
+        }
     }
 }
-
-.switch3:disabled{background-color: #eee;}
-.switch3:checked:disabled{background-color: #ccc;}
-
-@for $i from 8 through 30 {
-    $left:   $i + 3;
-    $width:  $i * 3 + 5;
-    $circle: $i * 2;
-    $legend: $i * 2 + 2;
-    $padding: '.p#{$i}';
-
-    // DEFAULT
-    @if $i == 12 {
-        .switch3{width: #{$width}px; padding: #{$i}px;}
-        .switch3::before{height: #{$circle}px; width: #{$circle}px;}
-        .switch3:checked:before{left: #{$left}px;}
-        .switch3 + .legend{height: #{$legend}px; line-height: #{$legend}px;}
-    }
-
-    .switch3#{$padding}{width: #{$width}px;}
-    .switch3#{$padding}::before{height: #{$circle}px; width: #{$circle}px;}
-    .switch3#{$padding}:checked:before{left: #{$left}px;}
-    .switch3#{$padding} + .legend{height: #{$legend}px; line-height: #{$legend}px;}
-}
-
-
 
 
 

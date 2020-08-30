@@ -6,17 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "colors": "sass sass/base/colors.scss sass/cache/colors.css --watch --no-source-map",
-    "production": "sass index.scss style.min.css --style compressed --watch --no-source-map"
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guilhermeHenry/oocss.git"
   },
-  "keywords": ["oocss"],
+  "keywords": [
+    "oocss"
+  ],
   "author": "guilhermeHenry",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guilhermeHenry/oocss/issues"
   },
-  "homepage": "https://github.com/guilhermeHenry/oocss#readme"
+  "homepage": "https://github.com/guilhermeHenry/oocss#readme",
+  "devDependencies": {
+    "webpack-mix": "^3.0.0"
+  }
 }
